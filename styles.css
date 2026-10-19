@@ -193,3 +193,13 @@ h3 { font-size: 1.3rem; }
 @media(max-width:620px) { .specialist-grid { grid-template-columns:1fr; } }
 
 .postal-address { font-style: normal; }
+
+/* Original oval brand, used consistently on every page. */
+.brand-logo { display:block; width:240px; height:auto; }
+.brand { flex-shrink:0; }
+.nav-wrap { min-height:112px; }
+.footer-brand .brand-logo { width:280px; max-width:100%; }
+section[id],article[id] { scroll-margin-top:130px; }
+@media(max-width:1050px) { .main-nav { gap:14px; font-size:.88rem; } .brand-logo { width:210px; } }
+@media(max-width:920px) { .main-nav { top:100px; max-height:calc(100dvh - 115px); } }
+@media(max-width:620px) { .brand-logo { width:195px; } .nav-wrap { min-height:94px; } .main-nav { top:88px; } }
