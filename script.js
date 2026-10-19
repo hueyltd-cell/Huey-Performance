@@ -1,13 +1,29 @@
 const menuButton = document.querySelector('.menu-btn');
 const navigation = document.querySelector('#main-nav');
+const servicesMenu = document.querySelector('.services-menu');
+const closeServices = () => { if (servicesMenu) servicesMenu.open = false; };
+document.addEventListener('click', (event) => {
+  if (!servicesMenu?.contains(event.target)) closeServices();
+});
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && servicesMenu?.open) {
+    closeServices();
+    servicesMenu.querySelector('summary').focus();
+  }
+});
+servicesMenu?.addEventListener('focusout', (event) => {
+  if (!servicesMenu.contains(event.relatedTarget)) closeServices();
+});
 
 menuButton?.addEventListener('click', () => {
   const open = navigation.classList.toggle('open');
+  if (!open) closeServices();
   menuButton.setAttribute('aria-expanded', String(open));
 });
 
 navigation?.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', () => {
+    closeServices();
     navigation.classList.remove('open');
     menuButton?.setAttribute('aria-expanded', 'false');
   });
