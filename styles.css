@@ -203,3 +203,23 @@ section[id],article[id] { scroll-margin-top:130px; }
 @media(max-width:1050px) { .main-nav { gap:14px; font-size:.88rem; } .brand-logo { width:210px; } }
 @media(max-width:920px) { .main-nav { top:100px; max-height:calc(100dvh - 115px); } }
 @media(max-width:620px) { .brand-logo { width:195px; } .nav-wrap { min-height:94px; } .main-nav { top:88px; } }
+
+/* Bespoke performance service graphics */
+#enthusiast-tuning .performance-card{background:linear-gradient(145deg,#1a2028,#101419);color:#f7f8fa;border:1px solid #303944;border-radius:10px;padding:26px;min-height:330px;box-shadow:0 12px 28px #0002;transition:border-color .2s,transform .2s;}
+#enthusiast-tuning .performance-card:hover{border-color:#e51b23;transform:translateY(-3px);}
+#enthusiast-tuning .performance-card p{color:#b9c2cd;}
+.performance-card-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:25px;}
+.service-icon{display:grid;place-items:center;width:84px;height:84px;border:1px solid #4b3035;border-radius:16px;background:radial-gradient(circle at 15% 10%,#e51b232b,transparent 75%),#15191f;color:#edf1f6;transform:skew(-5deg);}
+.service-icon svg{width:72px;height:72px;transform:skew(5deg);}
+.service-icon .icon-accent{stroke:#ff3942;}
+.performance-code{font-size:.68rem;font-weight:800;letter-spacing:.16em;color:#818b98;padding-top:7px;}
+#enthusiast-tuning .performance-card h3{font-size:1.27rem;line-height:1.2;}
+@media(prefers-reduced-motion:reduce){#enthusiast-tuning .performance-card{transition:none;}#enthusiast-tuning .performance-card:hover{transform:none;}}
+
+/* Polished metallic instrument graphics and per-service coverage */
+.service-icon{width:112px;height:112px;transform:none;border-radius:20px;background:radial-gradient(ellipse at 50% 90%,#e51b2330,transparent 75%),linear-gradient(135deg,#2b323d,#10151d);border:1px solid #48515e;box-shadow:inset 0 1px 0 #ffffff20,0 10px 24px #0008;}
+.service-icon svg{width:92px;height:92px;transform:none;filter:drop-shadow(0 5px 4px #0008);}
+#enthusiast-tuning .performance-card{display:flex;flex-direction:column;min-height:405px;}
+#enthusiast-tuning .performance-card .coverage-link{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding:14px 0 0;border-top:1px solid #3b4350;color:#fff;font-size:.88rem;font-weight:800;}
+.coverage-link span{color:#ff3942;font-size:1.2rem;}
+.coverage-link:focus-visible{outline:2px solid #ff3942;outline-offset:5px;}
