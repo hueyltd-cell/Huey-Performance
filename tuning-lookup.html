@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Registration Lookup | Huey Performance</title>
 <meta name="description" content="Enter your registration or VIN to explore reference power and torque figures for your car with Huey Performance.">
-<link rel="canonical" href="https://hueyperformance.co.uk/tuning-lookup">
-<link rel="icon" type="image/png" href="huey-performance-logo.png">
+<link rel="icon" type="image/png" href="huey-logo-560.png">
 <link rel="stylesheet" href="styles.css">
 <style>
 .lookup-main{padding:clamp(40px,7vw,80px) 0;min-height:65vh;background:#f3f5f8}
@@ -16,12 +15,20 @@
 .lookup-note{max-width:980px;margin:24px auto;color:#515b68}
 .lookup-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:28px}
 </style>
+
+  <link rel="canonical" href="https://hueyperformance.co.uk/tuning-lookup.html">
+  <meta property="og:url" content="https://hueyperformance.co.uk/tuning-lookup.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Registration Lookup | Huey Performance">
+  <meta property="og:description" content="Enter your registration or VIN to explore reference power and torque figures for your car with Huey Performance.">
 </head>
 <body>
+  <a class="skip-link" href="#top">Skip to main content</a>
+
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="index.html" aria-label="Huey Performance home">
-        <img class="brand-logo" src="huey-performance-logo.png" alt="Huey Performance" width="1960" height="784">
+        <img class="brand-logo" src="huey-logo-560.png" alt="Huey Performance" width="560" height="224">
       </a>
 
       <button class="menu-btn" aria-expanded="false" aria-controls="main-nav">Menu</button>
@@ -37,7 +44,7 @@
       </nav>
     </div>
   </header>
-<main class="lookup-main">
+<main class="lookup-main" id="top" tabindex="-1">
 <div class="container">
 <div class="lookup-copy">
 <p class="eyebrow">REGISTRATION &amp; TUNING LOOKUP</p>
@@ -59,7 +66,7 @@
     <div class="container footer-grid">
       <div>
         <div class="brand footer-brand">
-          <img class="brand-logo" src="huey-performance-logo.png" alt="Huey Performance" width="1960" height="784">
+          <img class="brand-logo" loading="lazy" decoding="async" src="huey-logo-560.png" alt="Huey Performance" width="560" height="224">
         </div>
         <p>UK-wide specialist ECU mapping, programming, diagnostics and mail-in ECU services.</p>
       </div>
@@ -78,6 +85,6 @@
       <p>© <span id="year"></span> Huey Performance. All rights reserved.</p>
     </div>
   </footer>
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>

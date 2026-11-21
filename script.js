@@ -1,5 +1,7 @@
 const menuButton = document.querySelector('.menu-btn');
 const navigation = document.querySelector('#main-nav');
+if (menuButton && navigation) document.documentElement.classList.add('has-mobile-menu');
+
 const servicesMenu = document.querySelector('.services-menu');
 const closeServices = () => { if (servicesMenu) servicesMenu.open = false; };
 document.addEventListener('click', (event) => {
@@ -9,6 +11,10 @@ document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && servicesMenu?.open) {
     closeServices();
     servicesMenu.querySelector('summary').focus();
+  } else if (event.key === 'Escape' && navigation?.classList.contains('open')) {
+    navigation.classList.remove('open');
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.focus();
   }
 });
 servicesMenu?.addEventListener('focusout', (event) => {
@@ -29,7 +35,8 @@ navigation?.querySelectorAll('a').forEach((link) => {
   });
 });
 
-document.querySelector('#year').textContent = new Date().getFullYear();
+const copyrightYear = document.querySelector('#year');
+if (copyrightYear) copyrightYear.textContent = new Date().getFullYear();
 
 document.querySelector('#ecu-enquiry-form')?.addEventListener('submit', (event) => {
   event.preventDefault();
